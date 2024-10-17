@@ -18,23 +18,20 @@
             </div>
         </header>
 
-
         <!-- Home Menu -->
         <div class="menu" id="menu-screen">
             <div class="menu-button" id="nav-btn">
                 <button class="map-button">
-                    <i class="fas fa-map-marker-alt"></i> map
+                    <i class="fas fa-map-marker-alt"></i> ⟟ 
                 </button>
             </div>
-
 
             <div class="menu-button" id="music-btn">
                 <button class="music-btn">
-                    <span class="music-screen">🎵</span>
+                    <span class="music-screen">♫</span>
                     <span class="btn-text"></span>
                 </button>
             </div>
-
 
             <div class="menu-button" id="climate-btn">
                 <button class="climate-btn">
@@ -42,7 +39,6 @@
                     <span class="btn-text"></span> <!-- Added button text here -->
                 </button>
             </div>
-
 
             <div class="menu-button" id="settings-btn">
                 <button title="settings-btn" class="settings-option">
@@ -55,12 +51,10 @@
             </div>
         </div>
 
-
         <!-- Display Area -->
         <div class="display-area" id="display">
             <p>Select an option from the menu.</p>
         </div>
-
 
         <!-- Climate Control Screen -->
         <div id="climate-screen" class="menu-screen" style="display: none;">
@@ -82,7 +76,6 @@
             </div>
         </div>
 
-
         <!-- Settings Screen -->
         <div id="settings-screen" class="menu-screen" style="display: none;">
             <header class="header">
@@ -91,7 +84,7 @@
             </header>
             <div class="settings-menu">
                 <div class="settings-option">
-                    <span>🔵 Bluetooth</span>
+                    <span> Bluetooth</span>
                     <button class="toggle-btn" id="bluetooth-toggle">ON</button>
                 </div>
                 <div class="settings-option">
@@ -107,9 +100,14 @@
                         <option value="de">German</option>
                     </select>
                 </div>
+                <body class="light-mode">
+                    <div class="theme-toggle">
+                        <label for="theme-switch">light-mode</label>
+                        <input type="checkbox" id="theme-switch" onclick="toggleTheme()">
+                    </div>
+                </body>
             </div>
         </div>
-
 
         <!-- Music Screen -->
         <div id="music-screen" class="menu-screen" style="display: none;">
@@ -121,9 +119,9 @@
             <ul id="playlist">
                 <li>Song 1</li>
                 <li>Song 2</li>
+                <li>song 3</li>
             </ul>
         </div>
-
 
         <!-- Navigation Screen -->
         <div id="nav-screen" class="menu-screen" style="display: none;">
@@ -136,16 +134,8 @@
        
     </div>
 
-
     <!-- Load the JavaScript file -->
     <script src="NAHRONJS.js"></script>
-
-
-    <!-- Google Maps API -->
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
-
 
 </body>
 </html>

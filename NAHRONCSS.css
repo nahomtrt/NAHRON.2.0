@@ -1,4 +1,4 @@
-/* Basic Reset */
+  Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -21,10 +21,10 @@ body {
 .car-display {
     width: 80vw;
     max-width: 800px;
-    background-color: rgb(0, 0, 0); /* Dark grey background */
+    background-color: rgb(255, 255, 255); /* Dark grey background */
     border-radius: 15px;
     overflow: hidden;
-    border: 2px solid rgb(0, 0, 0); /* Grey border */
+    border: 2px solid rgb(255, 255, 255); /* Grey border */
 }
 
 
@@ -34,8 +34,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgb(0, 0, 0); /* Slightly lighter black */
-    border-bottom: 1px solid rgb(0, 0, 0); /* Grey border */
+    background-color: rgb(255, 255, 255); /* Slightly lighter black */
+    border-bottom: 1px solid rgb(255, 255, 255); /* Grey border */
 }
 
 
@@ -56,8 +56,8 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    background-color: rgb(0, 0, 0); /* Dark grey */
-    border-bottom: 1px solid rgb(0, 0, 0); /* Grey border */
+    background-color: rgb(255, 252, 252); /* Dark grey */
+    border-bottom: 1px solid rgb(255, 255, 255); /* Grey border */
 }
 
 
@@ -90,7 +90,7 @@ body {
 .display-area {
     padding: 30px;
     height: 400px;
-    background-color: #333; /* Grey background */
+    background-color: #ffffff; /* Grey background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,31 +109,28 @@ body {
     gap: 10px;
 }
 
-
 #temp-slider {
     appearance: none;
     width: 100%; /* Horizontal slider */
     height: 10px;
-    background: #000000; /* Light grey background */
+    background: linear-gradient(to right, lightblue, red); 
     border-radius: 5px;
     outline: none;
+    transition: background 0.3s; /* Smooth transition */
 }
-
 
 #temp-slider::-webkit-slider-thumb {
     appearance: none;
     width: 20px;
     height: 20px;
-    background: #e83232; /* Yellow thumb */
+    background: #000000; /* Black thumb */
     border-radius: 50%;
     cursor: pointer;
 }
 
-
 #current-temp {
     font-size: 24px;
 }
-
 
 /* Settings Menu */
 .settings-menu, .climate-menu, .music-menu {
@@ -221,7 +218,7 @@ button:active {
 #playlist li {
     margin: 10px 0;
     background-color: rgb(0, 0, 0);
-    box-shadow: lightgray;
+    box-shadow: rgb(68, 66, 66);
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -231,6 +228,7 @@ button:active {
 #now-playing {
     font-size: 18px;
     color: #000000; /* back text */
+    box-shadow: red;
 }
 
 
@@ -430,3 +428,88 @@ body {
     transform: scale(0.95); /* Slight button press effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add depth */
   }
+  .light-mode .car-display {
+    --card-bg: #ffffff;
+    --header-bg: #eaeaea;
+    --border-color: #ccc;
+}
+
+.dark-mode .car-display {
+    --card-bg: #333;
+    --header-bg: #444;
+    --border-color: #555;
+}
+/* Scoped Theme Styles */
+.car-interface-theme body.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.car-interface-theme body.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.car-interface-theme .menu-screen {
+    padding: 20px;
+}
+
+.car-interface-theme .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.car-interface-theme .back-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: 4px solid #0056b3; /* Wider border */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.car-interface-theme .settings-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car-interface-theme .settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 4px solid #ccc; /* Wider border */
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.car-interface-theme .toggle-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: 4px solid #1e7e34; /* Wider border */
+    border-radius: 5px;
+}
+
+.car-interface-theme .toggle-btn.off {
+    background-color: #dc3545;
+    border: 4px solid #c82333; /* Wider border */
+}
+
+.car-interface-theme #brightness-slider {
+    width: 100%;
+}
+
+.car-interface-theme .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 4px solid #ccc; /* Wider border */
+    border-radius: 5px;
+    background-color: #fff;
+}
